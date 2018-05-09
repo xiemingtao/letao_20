@@ -70,11 +70,11 @@ $(function () {
       success:function (info) {
         console.log(info);
         if(info.success){
-          alert('登录成功')
-          location.href ="index.html"
+          // alert('登录成功')
+          // location.href ="index.html"
         }
         if(info.error===1001){
-          alert('密码错误')
+          // alert('密码错误')
           //updateStatus 三个参数
           //1- 字段名称
           //2- 校验状态 VALID INVALID
@@ -82,7 +82,7 @@ $(function () {
           $('#form').data('bootstrapValidator').updateStatus('password','INVALID','callback')
         }
         if(info.error===1000){
-          alert('用户名不存在')
+          // alert('用户名不存在')
           $('#form').data('bootstrapValidator').updateStatus('username','INVALID','callback')
         }
       }
