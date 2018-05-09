@@ -24,5 +24,20 @@ $(document).ajaxStop(function () {
   }, 500)
 })
 
+$(function () {
+//    公共的二级菜单切换功能
+  $('.category').click(function () {
+      $('.lt_aside .child').stop().slideToggle();
+  })
+
+//
+$('.icon_menu').click(function () {
+    $('.lt_aside').toggleClass('hidemenu');
+    $('.lt_main').toggleClass('hidemenu');
+    $('.lt_topbar').toggleClass('hidemenu');
+})
+
+})
+
 
 
