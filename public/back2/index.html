@@ -6,8 +6,55 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-<div>这是首页</div>
+<!--侧边栏-->
+<div class="lt_aside ">
+  <!--大标题-->
+  <div class='brand'><a href="javascript:;">黑马20期</a></div>
+  <!--用户-->
+  <div class="user">
+    <img src="./images/gg.jpg" alt="">
+    <p>超级管理者</p>
+  </div>
+  <!--导航-->
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="#" class='current'><i class='glyphicon glyphicon-user'></i><span>用户管理</span></a>
+      </li>
+      <li>
+        <a href="javascript:;"><i class='glyphicon glyphicon-list'></i><span>分类管理</span></a>
+        <div class="child" style="display: none;">
+          <a href="#">一级分类</a>
+          <a href="#">二级分类</a>
+        </div>
+      </li>
+      <li>
+        <a href="#"><i class='glyphicon glyphicon-tags'></i><span>商品管理</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--主体-->
+<div class="lt_main ">
+  <!--菜单导航-->
+  <div class="menu">
+    <a href="#" class="pull-left"><i class='glyphicon glyphicon-align-justify'></i></a>
+    <a href="#" class="pull-right"><i class='glyphicon glyphicon-log-out'></i></a>
+  </div>
+  <!--路径导航-->
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="#">管理系统</a></li>
+     
+      <li class="active">用户管理</li>
+    </ol>
+  </div>
+ 
+</div>
 </body>
 </html>
