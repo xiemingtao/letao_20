@@ -40,13 +40,13 @@
 
 <!--乐淘主体-->
 <div class="lt_main">
-<!--菜单栏-->
+  <!--菜单栏-->
   <div class="lt_topbar">
     <a href="javascript:;" class='pull-left icon_menu'>
       <i class="glyphicon glyphicon-align-justify"></i>
     </a>
-    <a href="javascript:;" class='pull-right'>
-      <i class='glyphicon glyphicon-log-out'></i>
+    <a href="javascript:;" class='pull-right icon_logout'>
+      <i class='glyphicon glyphicon-log-out' ></i>
     </a>
   </div>
   <!--希望有一个容器 可以撑满父容器, 自动kuad100%-->
@@ -57,8 +57,26 @@
       <li class="active">用户管理</li>
     </ol>
   </div>
-  
-  
+</div>
+
+
+<!--模态框-->
+<div class="modal fade" id='logouModal'>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p class='red'><i class='glyphicon glyphicon-info-sign'></i>你确定要退出后台系统吗</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id='logout_btn'>退出</button>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

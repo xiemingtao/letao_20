@@ -25,7 +25,9 @@ html, body {
 ul, ol {
   list-style: none;
 }
-
+.red{
+  color: #red;
+}
 /*a样式重置*/
 a:link,
 a:visited,

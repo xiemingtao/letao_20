@@ -27,16 +27,52 @@ $(document).ajaxStop(function () {
 $(function () {
 //    公共的二级菜单切换功能
   $('.category').click(function () {
-      $('.lt_aside .child').stop().slideToggle();
+    $('.lt_aside .child').stop().slideToggle();
   })
 
-//
-$('.icon_menu').click(function () {
+//2
+  $('.icon_menu').click(function () {
     $('.lt_aside').toggleClass('hidemenu');
     $('.lt_main').toggleClass('hidemenu');
     $('.lt_topbar').toggleClass('hidemenu');
-})
+  })
+  //3
+  $('.icon_logout').click(function () {
+    $('#logouModal').modal('show')
+  })
+  //4
+  $('#logout_btn').click(function () {
+    //    需要调用退出接口销毁登录状态
+    $.ajax({
+      type: 'get',
+      dataType: 'json',
+      url: '/employee/employeeLogout',
+      success: function (info) {
+        if (info.success) {
+          location.href = "login.html"
+        }
+      }
+    })
+  })
 
+
+//  5 登录拦截分析
+  
+  if (location.href.indexOf('login.html') === -1) {
+    //  如果没有login.html 需要判断当前用户状态
+    $.ajax({
+      type: 'get',
+      url: '/employee/checkRootLogin',
+      dataType: "json",
+      success: function (info) {
+        console.log(info);
+        if (info.success === 400) {
+          location.href = "login.html"
+        }
+      }
+    })
+  }
+  
 })
 
 
