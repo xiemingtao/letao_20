@@ -81,7 +81,7 @@ html {
   border-left: 1px solid #006699;
 }
 .lt_aside .nav li .child a {
-  margin-left: 10px;
+  text-indent: 10px;
 }
 .lt_aside .nav li i {
   margin-right: 10px;
