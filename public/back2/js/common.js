@@ -1,13 +1,13 @@
 //
+$('modal').modal('show')
 // 进度条
 //禁用进度环
-NProgress.configure({ showSpinner: false });
+NProgress.configure({showSpinner: false});
 //开启进度条
 
 $(document).ajaxStart(function () {
   NProgress.start()
 })
-
 
 //  关闭进度条
 $(document).ajaxStop(function () {
@@ -15,6 +15,8 @@ $(document).ajaxStop(function () {
     NProgress.done()
   }, 500)
 })
+
+
 $(function () {
   // 菜单功能
   $('.icon_menu').click(function () {
@@ -26,12 +28,6 @@ $(function () {
   $('.category').click(function () {
     $('.child').stop().slideToggle()
   })
-  
-  
-
-  
-  
- 
   
   
 })
@@ -48,3 +44,42 @@ $(function () {
 *
 *
 * */
+$(function () {
+  //模态框显示
+  $('.icon_logout').click(function () {
+    $('.modal').modal('show')
+  })
+
+
+//  退出
+  $('.out_btn').click(function () {
+    $.ajax({
+      type: 'get',
+      url: '/employee/employeeLogout',
+      dataType: 'json',
+      success: function (info) {
+        // console.log(info);
+        if (info.success) {
+          location.href = " login.html"
+        }
+      }
+    })
+  })
+
+//  登录验证
+  if (location.href.indexOf('login.html') == -1) {
+    $.ajax({
+      url: '/employee/checkRootLogin',
+      type: 'get',
+      dataType: 'json',
+      success: function (info) {
+        console.log(info);
+        if (info.error === 400) {
+          location.href = "login.html"
+        }
+      }
+    })
+  }
+  
+  
+})
