@@ -66,7 +66,7 @@ $(function () {
       dataType: "json",
       success: function (info) {
         console.log(info);
-        if (info.success === 400) {
+        if (info.error === 400) {
           location.href = "login.html"
         }
       }
