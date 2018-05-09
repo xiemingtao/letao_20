@@ -71,7 +71,7 @@ $(function () {
         console.log(info);
         if(info.success){
           // alert('登录成功')
-          // location.href ="index.html"
+          location.href ="index.html";
         }
         if(info.error===1001){
           // alert('密码错误')
