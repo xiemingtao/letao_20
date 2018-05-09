@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
@@ -26,7 +27,7 @@
         <a href="#" class='current'><i class='glyphicon glyphicon-user'></i><span>用户管理</span></a>
       </li>
       <li>
-        <a href="javascript:;"><i class='glyphicon glyphicon-list'></i><span>分类管理</span></a>
+        <a href="javascript:;" class='category'><i class='glyphicon glyphicon-list'></i><span>分类管理</span></a>
         <div class="child" style="display: none;">
           <a href="#">一级分类</a>
           <a href="#">二级分类</a>
@@ -43,11 +44,11 @@
 <div class="lt_main ">
   <!--菜单导航-->
   <div class="menu">
-    <a href="#" class="pull-left"><i class='glyphicon glyphicon-align-justify'></i></a>
-    <a href="#" class="pull-right"><i class='glyphicon glyphicon-log-out'></i></a>
+    <a href="#" class="pull-left  icon_menu"><i class='glyphicon glyphicon-align-justify'></i></a>
+    <a href="#" class="pull-right icon_logout"><i class='glyphicon glyphicon-log-out'></i></a>
   </div>
   <!--路径导航-->
-  <div class="container">
+  <div class="container-fluid">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
      
@@ -58,3 +59,6 @@
 </div>
 </body>
 </html>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="js/common.js"></script>

@@ -33,6 +33,10 @@ html {
   height: 100%;
   background-color: #222D32;
   z-index: 999;
+  transition: 1s;
+}
+.lt_aside.hideLeft {
+  left: -180px;
 }
 .lt_aside .brand {
   width: 180px;
@@ -88,6 +92,7 @@ html {
   padding-left: 180px;
   background-color: pink;
   padding-top: 50px;
+  transition: 1s;
 }
 .lt_main.hideLeft {
   padding-left: 0px;
@@ -100,6 +105,10 @@ html {
   position: fixed;
   left: 0;
   top: 0;
+  transition: 1s;
+}
+.lt_main .menu.hideLeft {
+  padding-left: 0;
 }
 .lt_main .menu a {
   width: 50px;
