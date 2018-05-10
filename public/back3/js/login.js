@@ -73,8 +73,10 @@ $(function () {
         //登录成功
         if(info.success){
           console.log(info);
-          alert('登录成功')
+          // alert('登录成功')
+        location.href ="index.html"
         }
+        
       }
     })
   })

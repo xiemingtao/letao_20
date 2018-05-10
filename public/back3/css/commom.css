@@ -28,6 +28,10 @@ body {
   left: 0;
   top: 0;
   z-index: 999;
+  transition: 1s;
+}
+.lt_aside.hideLeft {
+  left: -180px;
 }
 .lt_aside .title a {
   width: 100%;
@@ -81,6 +85,10 @@ body {
   height: 100%;
   padding-left: 180px;
   padding-top: 50px;
+  transition: 1s;
+}
+.lt_main.hideLeft {
+  padding-left: 0;
 }
 .lt_main .menu {
   height: 50px;
@@ -90,6 +98,10 @@ body {
   padding-left: 180px;
   left: 0;
   top: 0;
+  transition: 1s;
+}
+.lt_main .menu.hideLeft {
+  padding-left: 0;
 }
 .lt_main .menu a {
   display: block;

@@ -9,7 +9,10 @@
   left: 0;
   top: 0;
   z-index: 999;
-
+  transition: 1s;
+  &.hideLeft {
+    left: -180px;
+  }
   .title {
     a {
       width: 100%;
@@ -51,29 +54,34 @@
         color: #fff;
         padding-left: 30px;
         border-left: 3px solid transparent;
-        &.current{
+        &.current {
           background-color: #1D1F21;
           border-left: 3px solid #006699;
         }
-        i{
+        i {
           margin-right: 5px;
         }
       }
-      .child a{
+      .child a {
         margin-left: 10px;
       }
     }
   }
 }
+
 //主体
-.lt_main{
+.lt_main {
   width: 100%;
   height: 100%;
   padding-left: 180px;
   //background-color: pink;
   padding-top: 50px;
+  transition: 1s;
 
-  .menu{
+  &.hideLeft {
+    padding-left: 0;
+  }
+  .menu {
     height: 50px;
     width: 100%;
     background-color: #3C8DBC;
@@ -81,29 +89,32 @@
     padding-left: 180px;
     left: 0;
     top: 0;
-
-    a{
+    transition: 1s;
+    &.hideLeft {
+      padding-left: 0;
+    }
+    a {
       display: block;
       height: 50px;
       width: 50px;
       line-height: 50px;
       font-size: 20px;
-      text-align:center;
+      text-align: center;
       color: #fff;
-
 
     }
   }
-  .breadcrumb{
+  .breadcrumb {
     margin-top: 20px;
   }
 }
 
 //登录页面
-.bg_color{
+.bg_color {
   background-color: #222D32;
 }
-.panel-title{
+
+.panel-title {
   height: 40px;
   line-height: 40px;
   font-size: 18px;
