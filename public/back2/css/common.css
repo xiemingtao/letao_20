@@ -25,6 +25,9 @@ html {
 .mt_20 {
   margin-top: 20px;
 }
+.red {
+  color: #f40;
+}
 .bg_color {
   background-color: #222D32;
 }
