@@ -17,6 +17,11 @@ html {
   height: 100%;
   width: 100%;
 }
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
 .bg_color {
   background-color: #222D32;
 }

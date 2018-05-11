@@ -90,4 +90,4 @@ $(function () {
   myChart.setOption(option);
 
   
-})()
+})
