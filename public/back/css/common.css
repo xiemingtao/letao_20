@@ -33,6 +33,9 @@ ul, ol {
   vertical-align: middle;
   text-align: center;
 }
+.mt_20{
+  margin-top: 20px;
+}
 
 /*a样式重置*/
 a:link,
