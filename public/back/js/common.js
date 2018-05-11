@@ -36,13 +36,13 @@ $(function () {
     $('.lt_main').toggleClass('hidemenu');
     $('.lt_topbar').toggleClass('hidemenu');
   })
-  //3
+  //3显示模态框
   $('.icon_logout').click(function () {
     $('#logouModal').modal('show')
   })
-  //4
+  //4     需要调用退出接口销毁登录状态
   $('#logout_btn').click(function () {
-    //    需要调用退出接口销毁登录状态
+ 
     $.ajax({
       type: 'get',
       dataType: 'json',
