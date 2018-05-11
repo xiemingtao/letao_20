@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
   <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
+  <script src="./lib/echarts/echarts.min.js"></script>
 </head>
 <body>
 <div class="lt_aside">
@@ -49,13 +50,19 @@
       <i class='glyphicon glyphicon-log-out' ></i>
     </a>
   </div>
-  <!--希望有一个容器 可以撑满父容器, 自动kuad100%-->
+  <!--希望有一个容器 可以撑满父容器, 自动宽度100%-->
   <div class="container-fluid">
     <ol class="breadcrumb">
       <li><a href="index.html">管理系统</a></li>
       <!--<li><a href="#">Library</a></li>-->
       <li class="active">首页</li>
     </ol>
+  </div>
+  
+  <!--画布-->
+  <div class="canvas clearfix container-fluid" >
+    <div id="bar" style="width: 48%;height:400px;" class="pull-left"></div>
+    <div id="pie" style="width: 48%;height:400px;" class="pull-right"></div>
   </div>
 </div>
 
@@ -85,3 +92,4 @@
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="js/common.js"></script>
+<script src="js/index.js"></script>
