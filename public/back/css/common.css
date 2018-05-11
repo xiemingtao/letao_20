@@ -28,6 +28,12 @@ ul, ol {
 .red{
   color: red;
 }
+.table.table-hover th,
+.table.table-hover td{
+  vertical-align: middle;
+  text-align: center;
+}
+
 /*a样式重置*/
 a:link,
 a:visited,
