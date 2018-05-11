@@ -66,15 +66,7 @@ $(function () {
     })
   })
 
-//  添加分类
-//   $('.btn_add').on('click',function () {
-//       $.ajax({
-//         url:"/category/addSecondCategory",
-//         type:'post',
-//         dataType:'json',
-//
-//       })
-//   })
+
 
 //  给每一个下拉框绑定点击事件用来选择一级目录
   $('.dropdown-menu').on('click', 'a', function () {
@@ -86,6 +78,7 @@ $(function () {
     var id = $(this).data('id');
     //将id存入到表单控件里  categoryId(所属分类id)
     $('[name="categoryId"]').val(id)
+    $('#form').data('bootstrapValidator').updateStatus('categoryId',"VALID")
     
   })
 //  图片上传
@@ -97,6 +90,8 @@ $(function () {
       $('.imgBox').attr('src', picUrl);
       //将图片地址存到表单控件里  brandLogo(品牌logo图片地址)
       $('[name="brandLogo"]').val(picUrl);
+      
+      $('#form').data('bootstrapValidator').updateStatus('brandLogo',"VALID")
     }
   })
   
