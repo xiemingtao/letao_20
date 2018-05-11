@@ -22,6 +22,9 @@ html {
   text-align: center;
   vertical-align: middle;
 }
+.mt_20 {
+  margin-top: 20px;
+}
 .bg_color {
   background-color: #222D32;
 }
