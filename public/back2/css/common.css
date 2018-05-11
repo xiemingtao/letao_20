@@ -122,3 +122,8 @@ html {
 .lt_main .breadcrumb {
   margin-top: 20px;
 }
+.lt_main .canvas #main,
+.lt_main .canvas #pie {
+  width: 48%;
+  height: 400px;
+}

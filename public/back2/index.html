@@ -60,90 +60,17 @@
       </ol>
     </div>
     <!--画布-->
-    <div class="canvas">
+    <div class="canvas clearfix">
       <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-      <div id="main" style="width: 600px;height:400px;"></div>
-      <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
-        
-        // 指定图表的配置项和数据
-        var option = {
-          title: {
-            text: '2018年注册人数'
-          },
-          tooltip: {},
-          legend: {
-            data: ['人数']
-          },
-          xAxis: {
-            data: ["1月", "2月", "3月", "4月", "5月", "6月"]
-          },
-          yAxis: {
-            max:2500,
-          },
-          series: [{
-            name: '人数',
-            type: 'bar',
-            data: [1000, 1500, 2500, 1200, 600, 1800]
-          }]
-        };
-        
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-      </script>
+      <div id="main" class='pull-left'>
+      
+      </div>
+      
       <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-      <div id="pie" style="width: 600px;height:400px;"></div>
-      <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('pie'));
-    
-        // 指定图表的配置项和数据
-        var option = {
-          // backgroundColor: '#2c343c',
-  
-          title: {
-            text: '热门品牌销售\n2017年6月',
-            left: 'center',
-
-            textStyle: {
-              color: '#000'
-            }
-          },
-  
-       
-        
-          series : [
-            {
-              name:'访问来源',
-              type:'pie',
-              clockwise:true,
-              // startAngle:0,
-              radius : '55%',
-              center: ['50%', '50%'],
-              data:[
-                {value:234, name:'直接访问'},
-                {value:135, name:'邮件营销'},
-                {value:1548, name:'联盟广告'},
-                {value:335, name:'视频广告'},
-                {value:310, name:'搜索引擎'}
-              ].sort(function (a, b) { return a.value - b.value; }),
-              label: {
-                normal: {
-                  textStyle: {
-                    // color: 'rgba(255, 255, 255, 0.3)'
-                  }
-                }
-              },
-              clockwise:true
-              
-            }
-          ]
-        };
-    
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-      </script>
+      <div id="pie" class="pull-right">
+      
+      </div>
+     
     </div>
   </div>
 </div>
@@ -171,9 +98,10 @@
 
 </body>
 </html>
+
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
-
 <script src="js/common.js"></script>
+<script src="js/index.js"></script>
