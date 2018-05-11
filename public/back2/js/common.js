@@ -1,5 +1,4 @@
 //
-$('modal').modal('show')
 // 进度条
 //禁用进度环
 NProgress.configure({showSpinner: false});
@@ -47,7 +46,7 @@ $(function () {
 $(function () {
   //模态框显示
   $('.icon_logout').click(function () {
-    $('.modal').modal('show')
+    $('#outModal').modal('show')
   })
 
 
