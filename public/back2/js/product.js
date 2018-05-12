@@ -122,6 +122,7 @@ $(function () {
       
       var picObj = data.result;
       
+      
       $('.imgBox').prepend("<img src=" + picUrl + " height=100>")
       //将图片对象添加到数组中
       //unshift 在数组前面添加  shift 删除数组最前面一个
@@ -132,7 +133,11 @@ $(function () {
         imgArr.pop();
         $('.imgBox img:last-child').remove()
       }
-      
+      //重置图片检验状态
+      if (imgArr.length === 3) {
+        $('#form').data('bootstrapValidator').updateStatus('picStatus', 'VALID')
+      }
+      // console.log(imgArr);
     }
   })
 
@@ -215,28 +220,46 @@ $(function () {
           }
         }
       },
+      picStatus: {
+        validators: {
+          notEmpty: {
+            message: "请上传3张图片",
+          }
+        }
+      }
     }
   })
   
-  //校验成功 阻止表单提交由ajax提交
+  // 校验成功 阻止表单提交由ajax提交
   $('#form').on('success.form.bv', function (e) {
     e.preventDefault()
+    var parms = $('#form').serialize();
+    
+    parms += "&picName1=" + imgArr[0].picName + "&picAddr1=" + imgArr[0].picAddr;
+    parms += "&picName2=" + imgArr[1].picName + "&picAddr2=" + imgArr[1].picAddr;
+    parms += "&picName2=" + imgArr[2].picName + "&picAddr2=" + imgArr[2].picAddr;
+    
+    
     $.ajax({
       url: '/product/addProduct',
       type: 'post',
       dataType: 'json',
-      data: $('#form').serialize(),
+      data: parms,
       success: function (info) {
-        console.log(info);
+        // console.log(info);
         //重置表单
         $('#form').data('bootstrapValidator').resetForm(true);
-        
+        //重置下拉框
         $('.dropdownText').text('请选择二级分类')
-        
+        //重置图片
+        $('.imgBox').remove();
+        //隐藏模态框
+        $('#proModal').modal('hide');
+        //清空数组
+        imgArr = [];
         render();
       }
     })
   })
   
-  $('#form').serialize()
 })
