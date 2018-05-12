@@ -1,0 +1,134 @@
+@import "base";
+
+.lt_container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  overflow: hidden;
+
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+//头部
+.lt_header {
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  padding: 0 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .icon_left,
+  .icon_right {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+  }
+  .icon_left {
+    left: 0;
+  }
+  .icon_right {
+    right: 0;
+  }
+
+  h3 {
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+//主体
+.lt_main {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .nav {
+    padding: 10px;
+    li {
+      float: left;
+      width: 33.3%;
+
+      a {
+        display: block;
+
+      }
+    }
+  }
+
+  .product {
+    padding: 10px;
+    text-align: center;
+    .product_item {
+      width: 48%;
+      float: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+
+      &:nth-child(odd){
+        margin-right: 4%;
+      }
+     .price{
+       color: orange;
+     }
+      .oddprice{
+        text-decoration: line-through;
+      }
+    }
+  }
+
+}
+
+//底部
+.lt_footer {
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #006699;
+
+  li {
+    float: left;
+    width: 25%;
+    height: 55px;
+
+    &.current {
+      a {
+        color: orange;
+      }
+      p {
+        color: orange;
+      }
+    }
+    a {
+      display: block;
+      text-align: center;
+      height: 55px;
+      width: 100%;
+      padding-top: 10px;
+      color: #fff;
+    }
+    p {
+      margin: 0;
+      color: #fff;
+    }
+  }
+}

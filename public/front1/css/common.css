@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.lt_container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  padding-top: 45px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.lt_header {
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  padding: 0 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lt_header .icon_left,
+.lt_header .icon_right {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 0;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+}
+.lt_header .icon_left {
+  left: 0;
+}
+.lt_header .icon_right {
+  right: 0;
+}
+.lt_header h3 {
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.lt_main {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.lt_main .nav {
+  padding: 10px;
+}
+.lt_main .nav li {
+  float: left;
+  width: 33.3%;
+}
+.lt_main .nav li a {
+  display: block;
+}
+.lt_main .product {
+  padding: 10px;
+  text-align: center;
+}
+.lt_main .product .product_item {
+  width: 48%;
+  float: left;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.lt_main .product .product_item:nth-child(odd) {
+  margin-right: 4%;
+}
+.lt_main .product .product_item .price {
+  color: orange;
+}
+.lt_main .product .product_item .oddprice {
+  text-decoration: line-through;
+}
+.lt_footer {
+  height: 55px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #006699;
+}
+.lt_footer li {
+  float: left;
+  width: 25%;
+  height: 55px;
+}
+.lt_footer li.current a {
+  color: orange;
+}
+.lt_footer li.current p {
+  color: orange;
+}
+.lt_footer li a {
+  display: block;
+  text-align: center;
+  height: 55px;
+  width: 100%;
+  padding-top: 10px;
+  color: #fff;
+}
+.lt_footer li p {
+  margin: 0;
+  color: #fff;
+}
