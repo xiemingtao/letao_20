@@ -1,0 +1,49 @@
+
+.lt_main_left {
+  width: 90px;
+  height: 100%;
+  float: left;
+  position: relative;
+
+  a {
+    display: block;
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #e3e4e5;
+    color: #666;
+    
+    &.current{
+      background-color: #fff;
+      border: none;
+    }
+  }
+}
+
+.lt_main_right{
+  //float: left;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  li{
+    float: left;
+    width: 33.3%;
+
+    a{
+      display: block;
+
+      img{
+        width: 70px;
+        height: 50px;
+        margin: 0 auto;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+}
