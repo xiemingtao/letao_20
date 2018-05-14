@@ -99,6 +99,7 @@ img {
   border: 1px solid #ccc;
   margin-bottom: 10px;
   padding: 10px;
+  border-radius: 5px;
 }
 .lt_main .product .product_item:nth-child(odd) {
   margin-right: 4%;
@@ -108,6 +109,9 @@ img {
 }
 .lt_main .product .product_item .oddprice {
   text-decoration: line-through;
+}
+.lt_main .product .product_item p.mui-ellipsis-2 {
+  height: 40px;
 }
 .lt_footer {
   height: 55px;
@@ -139,4 +143,24 @@ img {
 .lt_footer li p {
   margin: 0;
   color: #fff;
+}
+.search {
+  padding: 10px;
+  position: relative;
+}
+.search input {
+  margin: 0;
+  padding: 0;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #007aff;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+.search button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
 }

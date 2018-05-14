@@ -81,6 +81,7 @@
       padding: 10px;
       margin-bottom: 10px;
       padding: 10px;
+      border-radius: 5px;
 
       &:nth-child(odd){
         margin-right: 4%;
@@ -90,6 +91,9 @@
      }
       .oddprice{
         text-decoration: line-through;
+      }
+      p.mui-ellipsis-2{
+        height: 40px;
       }
     }
   }
@@ -130,5 +134,27 @@
       margin: 0;
       color: #fff;
     }
+  }
+}
+
+.search{
+  padding: 10px;
+  position: relative;
+
+  input{
+    margin: 0;
+    padding: 0;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #007aff;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 12px;
+  }
+  button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 5px;
   }
 }
