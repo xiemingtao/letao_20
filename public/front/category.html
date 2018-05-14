@@ -59,28 +59,28 @@
   <!--底部-->
   <div class="lt_footer">
     <ul>
-      <li class="current">
+      <li>
         <a href="index.html">
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a>
       </li>
-      <li>
+      <li class="current">
         <a href="category.html">
           <i class="fa fa-bars"></i>
-          <p>首页</p>
+          <p>分类</p>
         </a>
       </li>
       <li>
         <a href="cart.html">
           <i class="fa fa-shopping-cart"></i>
-          <p>首页</p>
+          <p>购物车</p>
         </a>
       </li>
       <li>
         <a href="user.html">
           <i class="fa fa-user"></i>
-          <p>首页</p>
+          <p>用户</p>
         </a>
       </li>
     </ul>
@@ -104,6 +104,10 @@
 
 </script>
 <script type="text/template" id="cateTpl">
+  
+  {{ if rows.length ===0}}
+    <p class="tmip">没有更多的品牌信息</p>
+  {{/if}}
   {{each rows v i}}
   <li>
     <a href="javascript:;">

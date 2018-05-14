@@ -1,0 +1,42 @@
+.lt_product_left {
+  width: 90px;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.lt_product_left a {
+  display: block;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #e3e4e5;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #666;
+}
+.lt_product_left a.current {
+  background-color: #fff;
+  border: none;
+}
+.lt_product_right {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.lt_product_right li {
+  width: 33.3%;
+  float: left;
+}
+.lt_product_right li img {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
+.lt_product_right li p {
+  text-align: center;
+}
+.tmip {
+  margin-top: 20px;
+  margin-left: 20px ;
+}
