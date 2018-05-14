@@ -9,60 +9,48 @@
   <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/category.css">
-  <title>分类</title>
+  <link rel="stylesheet" href="./css/search.css">
+  <title>Document</title>
 </head>
 <body>
 <!--全屏容器 整体区域-->
 <div class="lt_container">
   <!--头部-->
   <div class="lt_header">
-    <a href="index.html" class="icon_left"><i class="fa fa-home"></i></a>
-    <h3>乐淘云购</h3>
-    <a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>
+    <a href="javascript:history.go(-1)" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+    <h3>搜索中心</h3>
+    <!--<a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>-->
   </div>
   <!--主体-->
   <div class="lt_main">
-    
-    <!--左边区域滚动-->
-    <div class="lt_main_left">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <!--这里放置真实显示的DOM内容-->
-          <!--导航-->
-          <ul>
-          
-          </ul>
+    <!--区域滚动-->
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!--这里放置真实显示的DOM内容-->
+        <!--搜索框-->
+        <div class="lt_search">
+          <input type="text" placeholder="请输入搜索关键字">
+          <button class="mui-btn mui-btn-primary btn_search">搜索</button>
+        </div>
+        <!--历史记录-->
+        <div class="lt_history">
         
         </div>
+      
       </div>
     </div>
-    
-    
-    <!--右边区域滚动-->
-    <div class="lt_main_right">
-      <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-          <!--这里放置真实显示的DOM内容-->
-          <ul class="mui-clearfix">
-          
-          </ul>
-        </div>
-      </div>
-    </div>
-  
   
   </div>
   <!--底部-->
   <div class="lt_footer">
     <ul>
-      <li>
+      <li class="current">
         <a href="index.html">
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a>
       </li>
-      <li class="current">
+      <li>
         <a href="category.html">
           <i class="fa fa-bars"></i>
           <p>分类</p>
@@ -87,31 +75,25 @@
 </html>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
-<script src="js/common.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
-<script src="js/category.js"></script>
-<script type="text/template" id="navTpl">
-  {{ each rows v i}}
-  {{ if v.id===1}}
-  <li><a href="#" data-id='{{v.id}}' class="current">{{v.categoryName}}</a></li>
+<script src="js/common.js"></script>
+<script src="js/search.js"></script>
+<script type="text/template" id="searchTpl">
+  {{if arr.length===0}}
+  <p>没有历史记录</p>
   {{else}}
-  <li><a href="#" data-id='{{v.id}}'>{{v.categoryName}}</a></li>
+  <div class="history_title mui-clearfix">
+    <span class="mui-pull-left">搜索历史</span>
+    <span class="mui-pull-right btn_empty"><i class="fa fa-trash"></i>清空记录</span>
+  </div>
+  <div class="history_list">
+    <ul>
+      {{ each arr v i}}
+      <li><a href="#" data-index="{{i}}">{{v}}</a> <i class="mui-icon mui-icon-closeempty mui-pull-right btn_del"></i>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
   {{/if}}
-  {{ /each}}
 
 </script>
-<script type="text/template" id="cateTpl">
-  
-  {{ if rows.length ===0}}
-    <p class="tmip">没有更多的品牌信息</p>
-  {{/if}}
-  {{each rows v i}}
-  <li>
-    <a href="javascript:;">
-      <img src="{{v.brandLogo}}" alt="">
-      <p>{{v.brandName}}</p>
-    </a>
-  </li>
-  {{/each}}
-</script>
-

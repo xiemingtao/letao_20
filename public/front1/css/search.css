@@ -19,6 +19,8 @@
   line-height: 30px;
 }
 .historyList ul a {
+  width: 80%;
+  display: inline-block;
   font-size: 12px;
 }
 .historyList ul i {

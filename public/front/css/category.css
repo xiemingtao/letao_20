@@ -39,3 +39,7 @@
 .lt_main_right li a p {
   text-align: center;
 }
+.lt_main_right .tmip {
+  margin-top: 20px;
+  margin-left: 20px;
+}

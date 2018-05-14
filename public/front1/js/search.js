@@ -93,7 +93,7 @@ $(function () {
   })
   
 //  给每个搜索记录绑定点击事件
-  $('.history').on('click','.history .historyList ul li',function () {
+  $('.history').on('click','.history .historyList ul li a',function () {
       var txt = $(this).text()
   
     location.href = "searchList.html?key=" + txt;

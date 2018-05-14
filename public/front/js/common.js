@@ -15,3 +15,20 @@ $(function () {
     interval:1000//自动轮播周期，若为0则不自动播放，默认为0；
   });
 })
+
+function getSearch(key) {
+  var data = location.search;
+  var obj = {}
+  
+  data = decodeURI(data)
+  
+  data = data.slice(1)
+  var arr = data.split("&");
+  
+  arr.forEach(function (ele,index) {
+    var v = ele.split("=")
+    
+    obj[v[0]] = v[1]
+  })
+  return obj[key]
+}
