@@ -1,33 +1,33 @@
 $(function () {
-//    发送ajax请求获取数据渲染页面
+//    请求ajax数据获取用户信息渲染
   $.ajax({
-    type: 'get',
     url: '/user/queryUserMessage',
+    type: 'get',
     success: function (info) {
       console.log(info);
+      //未登录 跳转到登录页面
       if (info.error === 400) {
         location.href = "login.html";
-        
-        return
       }
-      var htmlStr = template('userTpl', info);
-      $('.mui-scroll-wrapper #userInfo').html(htmlStr)
-      
+      // 获取信息成功 渲染数据
+      var htmlStr = template('userTpl', info)
+      $('#userInfo').prepend(htmlStr)
     }
   })
 
-//  点击退出按钮 跳转到登录页面
-  $('.btn_logout button').click(function () {
+
+//  点击退出按钮退出登录
+  $('.user_out button').click(function () {
     $.ajax({
       type: "get",
       url: '/user/logout',
       success: function (info) {
         console.log(info);
-        //退出成功跳转到登录页面
         if (info.success) {
           location.href = "login.html"
         }
       }
     })
   })
+  
 })

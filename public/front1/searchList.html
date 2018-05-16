@@ -25,7 +25,7 @@
   
   <div class="lt_main">
     
-    <div class="mui-scroll-wrapper">
+    <div class="mui-scroll-wrapper"  id="refreshContainer">
       <div class="mui-scroll">
         <!--这里放置真实显示的DOM内容-->
         <!--搜索-->
@@ -41,7 +41,7 @@
         </div>
         <!--产品列表-->
         <div class="product mui-clearfix">
-          <div class="loadding"></div>
+          <!--<div class="loadding"></div>-->
         </div>
       </div>
     </div>
@@ -79,7 +79,7 @@
   {{each data v i}}
   
   
-  <div class="product_item">
+  <div class="product_item" data-id="{{v.id}}">
     <img src="{{v.pic[0].picAddr}}" alt="">
     <p class="mui-ellipsis-2">{{v.proName}} </p>
     <p>

@@ -6,7 +6,7 @@ $(function () {
         type: 'get',
         url: '/cart/queryCart',
         success: function (info) {
-          console.log(info);
+          console.log(info[0].pic[0].picAddr);
           //需要登录状态,如果未登录,需要跳转到登录页面,登录成功后跳转回来
           if (info.error === 400) {
             // 把本页面的链接拼接在新网站的后面

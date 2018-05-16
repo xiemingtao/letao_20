@@ -63,7 +63,7 @@ $(function () {
   
     mui('#refreshContainer').pullRefresh().pulldownLoading()
     
-    history.pushState && history.pushState({}, null ,"?key="+txt);
+    // history.pushState && history.pushState({}, null ,"?key="+txt);
     
     // $('.lt_search input').val('')
   })

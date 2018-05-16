@@ -24,7 +24,9 @@
   position: absolute;
   top: 0;
   left: 0;
-
+  .mui-icon{
+    line-height: 45px;
+  }
   .icon_left,
   .icon_right {
     position: absolute;
@@ -156,5 +158,20 @@
     right: 10px;
     bottom: 10px;
     border-radius: 5px;
+  }
+}
+
+//公共类尺寸
+.product_size {
+  span {
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    padding: 5px;
+    line-height: 30px;
+
+    &.current{
+      background-color: orange;
+    }
   }
 }

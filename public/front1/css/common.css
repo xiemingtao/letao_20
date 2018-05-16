@@ -50,6 +50,9 @@ img {
   top: 0;
   left: 0;
 }
+.lt_header .mui-icon {
+  line-height: 45px;
+}
 .lt_header .icon_left,
 .lt_header .icon_right {
   position: absolute;
@@ -163,4 +166,14 @@ img {
   right: 10px;
   bottom: 10px;
   border-radius: 5px;
+}
+.product_size span {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  padding: 5px;
+  line-height: 30px;
+}
+.product_size span.current {
+  background-color: orange;
 }
