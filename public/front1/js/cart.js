@@ -11,6 +11,9 @@ $(function () {
         url: "/cart/queryCart",
         success: function (info) {
           console.log(info);
+          if (info.error == 400) {
+            location.href = 'login.html?Url=' + location.href;
+          }
           //  获取到数据渲染模板
           var htmlStr = template("cartListTpl", {list: info});
           
